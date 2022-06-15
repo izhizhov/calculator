@@ -7,20 +7,6 @@ from PySide6.QtGui import QFontDatabase
 
 from calc_design import Ui_MainWindow
 
-operations = {
-    '+': add,
-    '−': sub,
-    '×': mul,
-    '/': truediv
-}
-
-error_zero_div = 'Division by zero'
-error_undefined = 'Result is undefined'
-
-default_font_size = 16
-default_entry_font_size = 40
-
-
 class Calculator(QMainWindow):
     def __init__(self):
         super(Calculator, self).__init__()
@@ -50,10 +36,10 @@ class Calculator(QMainWindow):
         digit_buttons = ('btn_0', 'btn_1', 'btn_2', 'btn_3', 'btn_4',
                          'btn_5', 'btn_6', 'btn_7', 'btn_8', 'btn_9')
         if btn.objectName() in digit_buttons:
-            if self.ui.entry.text() == '0':
-                self.ui.entry.setText(btn.text())
+            if self.entry.text() == '0': #не забываем убирать лишний ui.le_ 
+                self.entry.setText(btn.text())
             else:
-                self.ui.entry.setText(self.ui.entry.text() + btn.text())
+                self.entry.setText(self.entry.text() + btn.text())
 
 
 if __name__ == "__main__":
