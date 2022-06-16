@@ -65,6 +65,7 @@ class Ui_MainWindow(object):
 
         self.lineEdit = QLineEdit(self.centralwidget)
         self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setObjectName(u"lineEdit")
         sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Maximum)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
